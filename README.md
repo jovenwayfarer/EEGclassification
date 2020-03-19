@@ -21,15 +21,19 @@ Net(
 ```
 <br/>
 ```
-criterion = nn.BCEWithLogitsLoss()<br/>
-optimizer = torch.optim.Adam(net.parameters())<br/>
-num_epochs = 30<br/>
+criterion = nn.BCEWithLogitsLoss()
+optimizer = torch.optim.Adam(net.parameters())
+num_epochs = 30
 ```
+<br/>
 # Tor3
 65% of accuracy and AUC=0.72 for data with CSP and with segmentation 0.75-3.5 sec <br/>
 Convolution -> Batch Normalization -> Relu-> Dropout->Convolution-> Batch Normalization -> Relu-> Dropout ->fully connected><br/>
-criterion = nn.CrossEntropyLoss()<br/>
-num_epochs = 20<br/>
+```
+criterion = nn.CrossEntropyLoss()
+num_epochs = 20
+```
+<br/>
 # Tor4
 66% of accuracy and AUC=0.72 for data with CSP and with segmentation 0.75-3.5 sec <br/>
 ```
@@ -38,8 +42,9 @@ Tor4(
   (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
   (fc1): Linear(in_features=105600, out_features=10, bias=True)
   (fc2): Linear(in_features=10, out_features=2, bias=True)
+)
 ```
-)<br/>
+<br/>
 ```
 criterion = nn.BCEWithLogitsLoss()<br/>
 ```
