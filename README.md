@@ -26,6 +26,7 @@ optimizer = torch.optim.Adam(net.parameters())
 num_epochs = 30
 ```
 <br/>
+
 # Tor3
 65% of accuracy and AUC=0.72 for data with CSP and with segmentation 0.75-3.5 sec <br/>
 Convolution -> Batch Normalization -> Relu-> Dropout->Convolution-> Batch Normalization -> Relu-> Dropout ->fully connected><br/>
